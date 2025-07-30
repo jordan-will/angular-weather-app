@@ -1,7 +1,7 @@
 # 🌦️ Angular Weather App
 
 <p align="center">
-<img src="screen/home.gif" alt="Weather App Demo" width="800"/>
+<img src="screen/home.gif" alt="Weather App Demo" width="600"/>
 </p>
 
 This is a weather app built with **Angular**, which consumes data from the **WeatherAPI** to display up-to-date weather information with a modern, responsive interface.
