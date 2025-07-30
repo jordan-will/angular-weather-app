@@ -1,0 +1,107 @@
+@use './styles/mixins';
+
+$primary: #6497b1;
+$dark: #4e4a4a;
+$light: #ffffff;
+$gray: #d9d3d3;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+%card-in-mobile {
+  background: white;
+  width: 95%;
+  margin: 1rem auto;
+  padding: 1.5rem 1rem;
+  border-radius: 8px;
+}
+
+
+.weather {
+  margin: auto;
+  background: #fff;
+  width: 100%;
+  height: 100vh;
+  border-radius: 4px;
+  background: transparent;
+
+  @include mixins.breakpoint(sm) {
+    max-width: 500px;
+    padding-top: 2rem;
+  }
+
+  &__title {
+    font-size: 1rem;
+  }
+
+  &__subtitle {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__main {
+    width: 100%;
+  }
+
+  &__location {
+    background-color: $dark;
+    color: $light;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    
+    @extend %card-in-mobile;
+
+    @include mixins.breakpoint(sm){
+      width: 100%;
+      margin: 0;
+      margin-top: 1.5rem;
+    }
+
+    &-temp {
+      font-size: 3rem;
+      display: flex;
+    }
+
+    &-text {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__detail {
+    // padding: 0.5rem;
+    @extend %card-in-mobile;
+    @include mixins.breakpoint(sm){
+      width: 100%;
+    }
+  }
+
+  &__item {
+    padding: 0.7rem 0;
+    border-bottom: #eee 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+
+}

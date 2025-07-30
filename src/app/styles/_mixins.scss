@@ -1,0 +1,19 @@
+@use 'sass:map';
+
+$breakpoints: (
+  sm: 768px,
+  md: 992px,
+  lg: 1024px
+);
+
+@mixin breakpoint($bp) {
+  $point: map.get($breakpoints, $bp);
+
+  @if $point {
+    @media(min-width: $point) {
+      @content;
+    }
+  }@else {
+    @warn "Breakpoint '#{$bp}' does not exist";
+  }
+}
