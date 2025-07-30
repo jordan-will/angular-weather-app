@@ -7,7 +7,7 @@ import { Geolocation } from './geolocation';
 import { ENV } from '../env';
 
 const API_KEY: string = ENV.API_KEY;
-const BASE_URL: string = 'http://api.weatherapi.com/v1/'
+const BASE_URL: string = 'https://api.weatherapi.com/v1/'
 
 export interface Weather {
   country: string,
